@@ -61,7 +61,7 @@ defmodule GameTest do
     assert game.turns_left == 6
   end
 
-  test "bad guesses lead to loss" do
+  test "a loss is recognized" do
     game = Game.new_game("w")
     { game, _tally } = Game.make_move(game, "a")
     assert game.game_state == :bad_guess
